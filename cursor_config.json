@@ -1,0 +1,21 @@
+{
+  "email": "shaamocha3003@gmail.com",
+  "error_type": "Access blocked during registration",
+  "timestamp": "",
+  "device_info": {
+    "os": "Linux",
+    "os_version": "#21~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Feb 24 16:52:15 UTC 2",
+    "python_version": "3.12.3",
+    "machine": "x86_64"
+  },
+  "attempts": [
+    {
+      "timestamp": "2025-04-15 16:02:43",
+      "details": "Access blocked, please contact your admin"
+    },
+    {
+      "timestamp": "2025-04-15 16:03:48",
+      "details": "Access blocked, please contact your admin"
+    }
+  ]
+}

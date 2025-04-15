@@ -1,171 +1,43 @@
-# Cursor Email Authentication Handler
+# Cursor AI Login Helper
 
-Sistem penanganan autentikasi email untuk Cursor AI dengan fitur pendeteksian email yang diblokir dan sistem whitelist untuk domain yang diizinkan.
+A Python utility to help document and manage login/registration issues with Cursor AI.
 
-## 🚀 Fitur
+## Features
 
-- ✅ Validasi format email
-- 🛡️ Pendeteksian email yang diblokir
-- ⚡ Sistem whitelist untuk domain yang diizinkan
-- 🔄 Penanganan error policy_denied
-- 📝 Sistem appeal otomatis
-- 🌐 Dukungan untuk berbagai domain (.com, .ac.id, .co.id, .go.id)
+- Document login and registration errors
+- Generate reports for Cursor support
+- Log previous attempts
+- Validate email formats
+- Provide alternative solutions
+- Open support pages directly
 
-## 📋 Persyaratan
+## Usage
 
-- Python 3.7 atau lebih tinggi
-- pip (Python package installer)
+1. Make sure you have Python 3 installed
+2. Run the script:
 
-## 🛠️ Instalasi
-
-1. Clone repository ini:
 ```bash
-git clone https://github.com/YourUsername/cursor-email-handler.git
-cd cursor-email-handler
+python cursor_support_tool.py
 ```
 
-2. Berikan izin eksekusi untuk script Linux (jika menggunakan Linux):
+Or with executable permissions:
+
 ```bash
-chmod +x run_linux.sh
+./cursor_support_tool.py
 ```
 
-## 💻 Cara Menjalankan
+3. Follow the prompts to enter your information and the issue details
+4. Use the menu options to:
+   - Report additional attempts
+   - Generate a support report
+   - Visit Cursor support
+   - View alternative approaches
 
-### Di Windows:
-1. Double click pada file `run_windows.bat`
+## Output Files
 
-Atau melalui Command Prompt:
-```bash
-run_windows.bat
-```
+- `cursor_login_issues.log`: Contains a log of all your attempts
+- `cursor_config.json`: Stores your configuration and issue data
 
-### Di Linux:
-1. Buka terminal di folder proyek
-2. Jalankan script:
-```bash
-./run_linux.sh
-```
+## Notes
 
-Script akan secara otomatis:
-- Memeriksa instalasi Python
-- Membuat virtual environment jika belum ada
-- Menginstal semua dependencies
-- Menjalankan program
-
-### Menjalankan Manual (Alternatif):
-
-1. Buat virtual environment (opsional tapi direkomendasikan):
-```bash
-# Windows
-python -m venv venv
-venv\Scripts\activate
-
-# Linux/Mac
-python3 -m venv venv
-source venv/bin/activate
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Jalankan program:
-```bash
-# Windows
-python email_registration_handler.py
-
-# Linux/Mac
-python3 email_registration_handler.py
-```
-
-## 📝 Contoh Output
-
-```
-Testing Cursor Authentication System:
---------------------------------------------------
-
-Mencoba login dengan email: user@gmail.com
-Status: Berhasil
-Pesan: Autentikasi berhasil! Mengalihkan ke dashboard...
-Session ID: 01JRW8HSC5A1AXN4ZVJX508Q8S
-Redirect URL: https://cursor.com/dashboard
-
-Mencoba login dengan email: blocked@example.com
-Status: Gagal
-Error Code: policy_denied
-Pesan: Akses ditolak karena kebijakan keamanan...
-```
-
-## 🔧 Konfigurasi
-
-Anda dapat mengkonfigurasi domain yang diizinkan dengan mengedit list `allowed_domains` di class `CursorAuthHandler`:
-
-```python
-self.allowed_domains = [
-    "gmail.com",
-    "yahoo.com",
-    "outlook.com",
-    "hotmail.com",
-    "company.com",
-    "ac.id",
-    "co.id",
-    "go.id"
-]
-```
-
-## 📚 API Reference
-
-### `CursorAuthHandler`
-
-#### `handle_auth(email: str, auth_url: str = None) -> AuthResult`
-Menangani proses autentikasi email.
-
-Parameters:
-- `email`: String email yang akan divalidasi
-- `auth_url`: (Opsional) URL autentikasi Cursor
-
-Returns:
-- `AuthResult` object dengan informasi status autentikasi
-
-### `EmailValidator`
-
-#### `is_valid_domain(domain: str) -> bool`
-Memvalidasi apakah domain email diizinkan.
-
-Parameters:
-- `domain`: String domain email
-
-Returns:
-- `bool`: True jika domain valid, False jika tidak
-
-## 🤝 Kontribusi
-
-Kontribusi selalu diterima! Berikut langkah-langkah untuk berkontribusi:
-
-1. Fork repository ini
-2. Buat branch baru (`git checkout -b feature/AmazingFeature`)
-3. Commit perubahan Anda (`git commit -m 'Add some AmazingFeature'`)
-4. Push ke branch (`git push origin feature/AmazingFeature`)
-5. Buat Pull Request
-
-## 🔍 Troubleshooting
-
-### Windows
-- Jika muncul error "python not recognized", pastikan Python sudah diinstall dan ditambahkan ke PATH
-- Jika script tidak berjalan, coba jalankan Command Prompt sebagai Administrator
-
-### Linux
-- Jika muncul error permission denied, jalankan: `chmod +x run_linux.sh`
-- Jika pip atau venv tidak terinstall, script akan mencoba menginstallnya secara otomatis
-- Jika diminta password sudo, masukkan password administrator Anda
-
-## 📝 Lisensi
-
-Distributed under the MIT License. Lihat `LICENSE` untuk informasi lebih lanjut.
-
-## 📧 Kontak
-
-Your Name - [@YourTwitter](https://twitter.com/YourTwitter)
-
-Project Link: [https://github.com/YourUsername/cursor-email-handler](https://github.com/YourUsername/cursor-email-handler) 
+This tool is meant to help document issues for support and does not bypass any security measures. If you're experiencing persistent login issues, contact Cursor AI support with the generated report. 
