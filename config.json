@@ -1,0 +1,23 @@
+{
+    "allowed_domains": [
+        "gmail.com",
+        "yahoo.com",
+        "outlook.com",
+        "hotmail.com",
+        "company.com",
+        "ac.id",
+        "co.id",
+        "go.id"
+    ],
+    "blocked_domains": [
+        "tempmail.com",
+        "disposable.com",
+        "throwaway.com"
+    ],
+    "settings": {
+        "auto_whitelist": true,
+        "enable_appeals": true,
+        "appeal_timeout_minutes": 60,
+        "max_login_attempts": 3
+    }
+} 
